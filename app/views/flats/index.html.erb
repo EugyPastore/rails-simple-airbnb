@@ -1,0 +1,23 @@
+<h1>All flats</h1>
+
+<div class = "container d-grid">
+  <div class = "row">
+
+    <% @flats.each do |flat| %>
+
+      <div class="card col-3" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= flat.name %></h5>
+        <p class="card-text"><%= flat.description %></p>
+        <p class="card-text"><%= flat.address %></p>
+        <span class="card-text"><%= flat.number_of_guests %></span>
+        <span class="card-text"><i class="fa-solid fa-euro-sign"><%= flat.price_per_night %></i></span><br>
+
+        <a href="#" class="btn btn-primary">More info</a>
+      </div>
+      </div>
+
+      <% end %>
+
+  </div><!--row-->
+</div> <!--container-->
